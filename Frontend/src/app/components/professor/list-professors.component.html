@@ -1,0 +1,291 @@
+<div class="container">
+    <div class="header">
+        <h1><i class="fa fa-university" aria-hidden="true"></i> КемГУ Кафедра ЮНЕСКО</h1>
+        <p>Информационный кафедральный портал.</p>
+    </div>
+    <div class="row">
+        <div class="col-md-9">
+            <div class="head">
+                <!--<div class="panel panel-default panel-inverse">-->
+                    <!--<div class="panel-heading"><h3><i class="fa fa-newspaper-o" aria-hidden="true"></i> Преподаватели</h3></div>-->
+                    <!--<div class="panel-body news">-->
+                        <!--<div *ngFor="let item of profs">-->
+                            <!--<single-news [item]="item"></single-news>-->
+                            <!--<hr>-->
+                        <!--</div>-->
+                        <!--<li *ngFor="let item of profs">-->
+                            <!--<p>Имя пользователя: {{item.fio}}</p>-->
+                        <!--</li>-->
+                    <!--</div>-->
+                <!--</div>-->
+
+                <!-- ~~~~~~~РАСПИСАНИЕ~~~~~~-->
+                <div class = "panel-heading"><h3><i class="fa fa-calendar" aria-hidden="true"></i> Расписание</h3></div>
+                    <div class="panel-body">
+                        <table class="table table-bordered">
+                            <thead>
+                            <tr>
+                                <th></th>
+                                <th></th>
+                                <th>М-141</th>
+                                <th>М-142</th>
+                                <th>М-144</th>
+                                <th>М-145</th>
+                            </tr>
+                            </thead>
+                            <!--~~~Monday~~~-->
+                            <tbody>
+                            <tr>
+                                <th rowspan="5" scope="rowgroup">Понедельник</th>
+                                <th scope="row">8:30 - 10:05</th>
+                                <!--<td>Пары для 141</td>-->
+                                <single-lesson></single-lesson>
+                                <td>Пары для 142</td>
+                                <td>Пары для 144</td>
+                                <td>Пары для 145</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">10:15 - 11:50</th>
+                                <td>Пары для 141</td>
+                                <td>Пары для 142</td>
+                                <td>Пары для 144</td>
+                                <td>Пары для 145</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">12:15 - 13:50</th>
+                                <td>Пары для 141</td>
+                                <td>Пары для 142</td>
+                                <td>Пары для 144</td>
+                                <td>Пары для 145</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">14:00 - 15:35</th>
+                                <td>Пары для 141</td>
+                                <td>Пары для 142</td>
+                                <td>Пары для 144</td>
+                                <td>Пары для 145</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">16:00 - 17:35</th>
+                                <td>Пары для 141</td>
+                                <td>Пары для 142</td>
+                                <td>Пары для 144</td>
+                                <td>Пары для 145</td>
+                            </tr>
+                            </tbody>
+                            <!--~~~Tuesday~~~-->
+                            <tbody>
+                            <tr>
+                                <th rowspan="5" scope="rowgroup">Вторник</th>
+                                <th scope="row">8:30 - 10:05</th>
+                                <td>Пары для 141</td>
+                                <td>Пары для 142</td>
+                                <td>Пары для 144</td>
+                                <td>Пары для 145</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">10:15 - 11:50</th>
+                                <td>Пары для 141</td>
+                                <td>Пары для 142</td>
+                                <td>Пары для 144</td>
+                                <td>Пары для 145</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">12:15 - 13:50</th>
+                                <td>Пары для 141</td>
+                                <td>Пары для 142</td>
+                                <td>Пары для 144</td>
+                                <td>Пары для 145</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">14:00 - 15:35</th>
+                                <td>Пары для 141</td>
+                                <td>Пары для 142</td>
+                                <td>Пары для 144</td>
+                                <td>Пары для 145</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">16:00 - 17:35</th>
+                                <td>Пары для 141</td>
+                                <td>Пары для 142</td>
+                                <td colspan="2">Пары для 144 и 145</td>
+                                <!--<td>Пары для 145</td>-->
+                            </tr>
+                            </tbody>
+                            <!--~~~Wednesday~~~-->
+                            <tbody>
+                            <tr>
+                                <th rowspan="5" scope="rowgroup">Среда</th>
+                                <th scope="row">8:30 - 10:05</th>
+                                <td>Пары для 141</td>
+                                <td>Пары для 142</td>
+                                <td>Пары для 144</td>
+                                <td>Пары для 145</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">10:15 - 11:50</th>
+                                <td>Пары для 141</td>
+                                <td>Пары для 142</td>
+                                <td>Пары для 144</td>
+                                <td>Пары для 145</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">12:15 - 13:50</th>
+                                <td>Пары для 141</td>
+                                <td>Пары для 142</td>
+                                <td>Пары для 144</td>
+                                <td>Пары для 145</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">14:00 - 15:35</th>
+                                <td>Пары для 141</td>
+                                <td>Пары для 142</td>
+                                <td>Пары для 144</td>
+                                <td>Пары для 145</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">16:00 - 17:35</th>
+                                <td>Пары для 141</td>
+                                <td>Пары для 142</td>
+                                <td>Пары для 144</td>
+                                <td>Пары для 145</td>
+                            </tr>
+                            </tbody>
+                            <!--~~~Thursday~~~-->
+                            <tbody>
+                            <tr>
+                                <th rowspan="5" scope="rowgroup">Четверг</th>
+                                <th scope="row">8:30 - 10:05</th>
+                                <td>Пары для 141</td>
+                                <td>Пары для 142</td>
+                                <td>Пары для 144</td>
+                                <td>Пары для 145</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">10:15 - 11:50</th>
+                                <td>Пары для 141</td>
+                                <td>Пары для 142</td>
+                                <td>Пары для 144</td>
+                                <td>Пары для 145</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">12:15 - 13:50</th>
+                                <td>Пары для 141</td>
+                                <td>Пары для 142</td>
+                                <td>Пары для 144</td>
+                                <td>Пары для 145</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">14:00 - 15:35</th>
+                                <td>Пары для 141</td>
+                                <td>Пары для 142</td>
+                                <td>Пары для 144</td>
+                                <td>Пары для 145</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">16:00 - 17:35</th>
+                                <td>Пары для 141</td>
+                                <td>Пары для 142</td>
+                                <td>Пары для 144</td>
+                                <td>Пары для 145</td>
+                            </tr>
+                            </tbody>
+                            <!--~~~Friday~~~-->
+                            <tbody>
+                            <tr>
+                                <th rowspan="5" scope="rowgroup">Пятница</th>
+                                <th scope="row">8:30 - 10:05</th>
+                                <td>Пары для 141</td>
+                                <td>Пары для 142</td>
+                                <td>Пары для 144</td>
+                                <td>Пары для 145</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">10:15 - 11:50</th>
+                                <td>Пары для 141</td>
+                                <td>Пары для 142</td>
+                                <td>Пары для 144</td>
+                                <td>Пары для 145</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">12:15 - 13:50</th>
+                                <td>Пары для 141</td>
+                                <td>Пары для 142</td>
+                                <td>Пары для 144</td>
+                                <td>Пары для 145</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">14:00 - 15:35</th>
+                                <td>Пары для 141</td>
+                                <td>Пары для 142</td>
+                                <td>Пары для 144</td>
+                                <td>Пары для 145</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">16:00 - 17:35</th>
+                                <td>Пары для 141</td>
+                                <td>Пары для 142</td>
+                                <td>Пары для 144</td>
+                                <td>Пары для 145</td>
+                            </tr>
+                            </tbody>
+                            <!--~~~Saturday~~~-->
+                            <tbody>
+                            <tr>
+                                <th rowspan="5" scope="rowgroup">Суббота</th>
+                                <th scope="row">8:30 - 10:05</th>
+                                <td>Пары для 141</td>
+                                <td>Пары для 142</td>
+                                <td>Пары для 144</td>
+                                <td>Пары для 145</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">10:15 - 11:50</th>
+                                <td>Пары для 141</td>
+                                <td>Пары для 142</td>
+                                <td>Пары для 144</td>
+                                <td>Пары для 145</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">12:15 - 13:50</th>
+                                <td>Пары для 141</td>
+                                <td>Пары для 142</td>
+                                <td>Пары для 144</td>
+                                <td>Пары для 145</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">14:00 - 15:35</th>
+                                <td>Пары для 141</td>
+                                <td>Пары для 142</td>
+                                <td>Пары для 144</td>
+                                <td>Пары для 145</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">16:00 - 17:35</th>
+                                <td>Пары для 141</td>
+                                <td>Пары для 142</td>
+                                <td>Пары для 144</td>
+                                <td>Пары для 145</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                <!-- ~~~~~~~РАСПИСАНИЕ~~~~~~-->
+
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="head">
+                <div class="panel panel-default">
+                    <div class="panel-heading"><h3><i class="fa fa-th" aria-hidden="true"></i> Разное</h3></div>
+                    <ul class="list-group">
+                        <li class="list-group-item">Сюда можно</li>
+                        <li class="list-group-item">Например</li>
+                        <li class="list-group-item">Вставить любые ссылки</li>
+                        <li class="list-group-item">Или другие штуки</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
