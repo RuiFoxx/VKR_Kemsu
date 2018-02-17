@@ -1,0 +1,23 @@
+spring:
+  mvc:
+    view:
+      prefix: /WEB-INF/views/
+      suffix: .jsp
+  datasource:
+    driverClassName: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/unesco
+    username: postgres
+    password: postgres
+
+jpa:
+  show-sql: true
+  hibernate:
+    ddl-auto: none
+    naming_strategy: org.hibernate.cfg.ImprovedNamingStrategy
+  properties:
+    hibernate:
+      dialect: org.hibernate.dialect.PostgreSQLDialect
+      hbm2ddl:
+        auto: none
+      temp:
+        use_jdbc_metadata_defaults: false
