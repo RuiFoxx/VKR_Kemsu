@@ -33,7 +33,8 @@ import { EditorListNewsComponent } from "../components/news/editor-list-news/edi
 import { ListNewsComponent } from "../components/news/list-news/list-news.component";
 import { NotFoundComponent } from "../components/notfound/notfound.component";
 import {ListProfessorsComponent} from "../components/professor/list-professors.component";
-import {SingleLessonComponent} from "../components/lessons/single-lesson.component";
+import {SinglePairComponent} from "../components/pairs/single-pair.component";
+import {ListPairsComponent} from "../components/pairs/list-pairs.component";
 
 // services
 import { NewsService } from "../services/news.service";
@@ -50,6 +51,7 @@ import {ConfirmDialogModule} from "primeng/components/confirmdialog/confirmdialo
 import {MessageService} from "primeng/components/common/messageservice";
 import {ConfirmationService} from "primeng/primeng";
 import {AccountService} from "../services/accountService";
+
 
 
 
@@ -86,7 +88,8 @@ import {AccountService} from "../services/accountService";
         NotFoundComponent,
         EnumKeysPipe,
         ListProfessorsComponent,
-        SingleLessonComponent
+        SinglePairComponent,
+        ListPairsComponent
     ],
     providers: [
         { provide: RequestOptions, useClass: GlobalHttpOptions },

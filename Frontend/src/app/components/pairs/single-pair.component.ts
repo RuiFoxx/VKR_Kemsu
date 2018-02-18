@@ -1,11 +1,11 @@
 import {Component, OnInit} from "@angular/core";
 @Component({
-    selector: 'single-lesson',
-    templateUrl: './single-lesson.component.html',
+    selector: 'single-pair',
+    templateUrl: './single-pair.component.html',
     // styleUrls: ['./single-news.component.css']
 })
 
-export class SingleLessonComponent implements OnInit {
+export class SinglePairComponent implements OnInit {
 
     ngOnInit(): void{
 

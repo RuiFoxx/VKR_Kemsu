@@ -10,6 +10,7 @@ import {RegisterComponent} from "../components/account/authentification/register
 import {EditorListNewsComponent} from "../components/news/editor-list-news/editor-list-news.component";
 import {EditorSingleNewsComponent} from "../components/news/editor-single-news/editor-single-news.component";
 import {ListProfessorsComponent} from "../components/professor/list-professors.component";
+import {ListPairsComponent} from "../components/pairs/list-pairs.component";
 
 export const routes: Routes = [
     // {
@@ -31,6 +32,12 @@ export const routes: Routes = [
         path: RouteConstants.Professor.All,
         component: ListProfessorsComponent,
         data: { title: "Главная" }
+    },
+
+    {
+        path: RouteConstants.Professor.GetPairs,
+        component: ListPairsComponent,
+        data: { title: "Расписание" }
     },
 
     {

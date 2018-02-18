@@ -1,9 +1,10 @@
 import {Injectable} from "@angular/core";
 import {Router} from "@angular/router";
-import {HttpClient, HttpErrorResponse} from "@angular/common/http";
+import {HttpClient, HttpErrorResponse, HttpParams} from "@angular/common/http";
 import {Professor} from "../models/professor.model";
 import {Observable} from "rxjs";
 import {ApiRouteConstants} from "../bootstrap/app.route.constants";
+import {Pair} from "../models/pair.model";
 
 
 @Injectable()
@@ -15,6 +16,13 @@ export class ProfessorService{
 
     public GetAll(): Observable<Array<Professor>> {
         return this.http.get(ApiRouteConstants.Professor.All)
+            .catch(this.handleError);
+    }
+
+    public GetPairs(id: number): Observable<Array<Pair>>{
+        let params: HttpParams = new HttpParams();
+        //Сделать пост
+        return this.http.get(ApiRouteConstants.Professor.GetPairs.replace(":id", id.toString()))
             .catch(this.handleError);
     }
 

@@ -15,11 +15,14 @@ export const RouteConstants = {
         Register: "account/register"
     },
     Professor: {
-        All: "professors"
+        All: "professors",
+        //GetPairs:"professors/pairs",
+        GetPairs:"professors/:id/pairs"
     },
     NotFound: "404"
 }
 
+//Для запросов в сервисах
 export const ApiRouteConstants = {
     Account: {
         FindUsersByName: "account/FindUsersByName/:req"
@@ -38,7 +41,8 @@ export const ApiRouteConstants = {
         Save: "news/save"
     },
     Professor: {
-        All: "professors"
+        All: "professors",
+        GetPairs:"professors/:id/pairs"//???
     },
     Issue: {
         All: "issue/list",
