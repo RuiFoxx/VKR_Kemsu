@@ -3,16 +3,16 @@ package com.unesco.core.entities;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "rooms")
-public class Room {
+@Table(name = "groups")
+public class Group {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
 
-    @Column(name = "room")
-    private String room;
+    @Column(name = "group")
+    private String group;
 
     @ManyToOne
-    @JoinColumn(name = "room_id", referencedColumnName = "id")
+    @JoinColumn(name = "group_id", referencedColumnName = "id")
     private Pair pair;
 }

@@ -12,6 +12,10 @@ public class DayOfWeek {
     @Column(name = "dayofweek")
     private String dayofweek;
 
+    @ManyToOne
+    @JoinColumn(name = "dayofweek_id", referencedColumnName = "id")
+    private Pair pair;
+
     public int getId() {
         return id;
     }

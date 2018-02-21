@@ -13,6 +13,10 @@ public class Professor {
     @Column(name = "FIO")
     private String fio;
 
+    @ManyToOne
+    @JoinColumn(name = "professor_id", referencedColumnName = "id")
+    private Pair pair;
+
     public long getId() {
         return id;
     }
