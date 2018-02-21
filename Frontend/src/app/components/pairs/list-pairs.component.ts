@@ -13,6 +13,7 @@ export class ListPairsComponent {
     public pairs:Pair[];
     private idProf: number;
 
+    //дополнительные листы для сортировки пар??
     constructor(private activateRoute: ActivatedRoute, private profService: ProfessorService){
         this.pairs=[];
         this.idProf = activateRoute.snapshot.params['id'];

@@ -1,4 +1,5 @@
-import {Component, OnInit} from "@angular/core";
+import {Component, OnInit, Input} from "@angular/core";
+import {Pair} from "../../models/pair.model";
 @Component({
     selector: 'single-pair',
     templateUrl: './single-pair.component.html',
@@ -6,6 +7,8 @@ import {Component, OnInit} from "@angular/core";
 })
 
 export class SinglePairComponent implements OnInit {
+
+    @Input() pair:Pair;
 
     ngOnInit(): void{
 
