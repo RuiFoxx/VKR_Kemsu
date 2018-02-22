@@ -9,12 +9,8 @@ public class Discipline {
     @GeneratedValue
     private long id;
 
-    @Column(name = "name")
+    @Column(name = "discipline")
     private String discipline;
-
-    @ManyToOne
-    @JoinColumn(name = "discipline_id", referencedColumnName = "id")
-    private Pair pair;
 
     public long getId() {
         return id;

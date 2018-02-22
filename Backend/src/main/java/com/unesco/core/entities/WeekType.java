@@ -12,10 +12,6 @@ public class WeekType {
     @Column(name = "type")
     private String type;
 
-    @ManyToOne
-    @JoinColumn(name = "weektype_id", referencedColumnName = "id")
-    private Pair pair;
-
     public int getId() {
         return id;
     }

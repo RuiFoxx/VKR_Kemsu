@@ -10,12 +10,8 @@ public class Professor {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
 
-    @Column(name = "FIO")
+    @Column(name = "fio")
     private String fio;
-
-    @ManyToOne
-    @JoinColumn(name = "professor_id", referencedColumnName = "id")
-    private Pair pair;
 
     public long getId() {
         return id;

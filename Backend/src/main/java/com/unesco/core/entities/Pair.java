@@ -14,43 +14,40 @@ public class Pair {
     @Column(name = "pairnumber")
     private int pairNumber;
 
-//    @Column(name = "time_start")
-//    private Time time_start;
-//
-//    @Column(name = "time_end")
-//    private Time time_end;
-
     //овердохера связей
-    @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL, mappedBy = "pair")
-    private Set<DayOfWeek> daysofweek;
+    @ManyToOne
+    @JoinColumn(name = "dayofweek_id", referencedColumnName = "id")
+    private DayOfWeek dayofweek;
 
-    @OneToMany(fetch = FetchType.LAZY, mappedBy = "pair")
-    private Set<WeekType> weektypes;
+    @ManyToOne
+    @JoinColumn(name = "weektype_id", referencedColumnName = "id")
+    private WeekType weektype;
 
-    @OneToMany(fetch = FetchType.LAZY, mappedBy = "pair")
-    private Set<Discipline> disciplines;
+    @ManyToOne
+    @JoinColumn(name = "discipline_id", referencedColumnName = "id")
+    private Discipline discipline;
 
-    @OneToMany(fetch = FetchType.LAZY, mappedBy = "pair")
-    private Set<Room> rooms;
+    @ManyToOne
+    @JoinColumn(name = "room_id", referencedColumnName = "id")
+    private Room room;
 
-    @OneToMany(fetch = FetchType.LAZY, mappedBy = "pair")
-    private Set<Professor> professors;
+    @ManyToOne
+    @JoinColumn(name = "professor_id", referencedColumnName = "id")
+    private Professor professor;
 
-    @OneToMany(fetch = FetchType.LAZY, mappedBy = "pair")
-    private Set<Group> groups;
+    @ManyToOne
+    @JoinColumn(name = "group_id", referencedColumnName = "id")
+    private Group group;
 
-    public Pair(int pairNumber, Time time_start, Time time_end,
-                Set<DayOfWeek> daysofweek, Set<WeekType> weektypes, Set<Discipline> disciplines,
-                Set<Room> rooms, Set<Professor> professors, Set<Group> groups) {
+    public Pair(int pairNumber, DayOfWeek dayofweek,
+                WeekType weektype, Discipline discipline, Room room, Professor professor, Group group) {
         this.pairNumber = pairNumber;
-//        this.time_start = time_start;
-//        this.time_end = time_end;
-        this.daysofweek = daysofweek;
-        this.weektypes = weektypes;
-        this.disciplines = disciplines;
-        this.rooms = rooms;
-        this.professors = professors;
-        this.groups = groups;
+        this.dayofweek = dayofweek;
+        this.weektype = weektype;
+        this.discipline = discipline;
+        this.room = room;
+        this.professor = professor;
+        this.group = group;
     }
 
     public Pair() {
@@ -72,67 +69,51 @@ public class Pair {
         this.pairNumber = pairNumber;
     }
 
-//    public Time getTime_start() {
-//        return time_start;
-//    }
-//
-//    public void setTime_start(Time time_start) {
-//        this.time_start = time_start;
-//    }
-//
-//    public Time getTime_end() {
-//        return time_end;
-//    }
-//
-//    public void setTime_end(Time time_end) {
-//        this.time_end = time_end;
-//    }
-
-    public Set<DayOfWeek> getDaysofweek() {
-        return daysofweek;
+    public DayOfWeek getDayofweek() {
+        return dayofweek;
     }
 
-    public void setDaysofweek(Set<DayOfWeek> daysofweek) {
-        this.daysofweek = daysofweek;
+    public void setDayofweek(DayOfWeek dayofweek) {
+        this.dayofweek = dayofweek;
     }
 
-    public Set<WeekType> getWeektypes() {
-        return weektypes;
+    public WeekType getWeektype() {
+        return weektype;
     }
 
-    public void setWeektypes(Set<WeekType> weektypes) {
-        this.weektypes = weektypes;
+    public void setWeektype(WeekType weektype) {
+        this.weektype = weektype;
     }
 
-    public Set<Discipline> getDisciplines() {
-        return disciplines;
+    public Discipline getDiscipline() {
+        return discipline;
     }
 
-    public void setDisciplines(Set<Discipline> disciplines) {
-        this.disciplines = disciplines;
+    public void setDiscipline(Discipline discipline) {
+        this.discipline = discipline;
     }
 
-    public Set<Room> getRooms() {
-        return rooms;
+    public Room getRoom() {
+        return room;
     }
 
-    public void setRooms(Set<Room> rooms) {
-        this.rooms = rooms;
+    public void setRoom(Room room) {
+        this.room = room;
     }
 
-    public Set<Professor> getProfessors() {
-        return professors;
+    public Professor getProfessor() {
+        return professor;
     }
 
-    public void setProfessors(Set<Professor> professors) {
-        this.professors = professors;
+    public void setProfessor(Professor professor) {
+        this.professor = professor;
     }
 
-    public Set<Group> getGroups() {
-        return groups;
+    public Group getGroup() {
+        return group;
     }
 
-    public void setGroups(Set<Group> groups) {
-        this.groups = groups;
+    public void setGroup(Group group) {
+        this.group = group;
     }
 }
