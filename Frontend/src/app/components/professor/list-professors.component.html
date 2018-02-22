@@ -1,0 +1,62 @@
+<div class="container">
+    <div class="header">
+        <h1><i class="fa fa-university" aria-hidden="true"></i> КемГУ Кафедра ЮНЕСКО</h1>
+        <p>Информационный кафедральный портал.</p>
+    </div>
+    <div class="row">
+        <div class="col-md-9">
+            <div class="head">
+                <!--<div class="panel panel-default panel-inverse">-->
+                    <!--<div class="panel-heading"><h3><i class="fa fa-newspaper-o" aria-hidden="true"></i> Преподаватели</h3></div>-->
+                    <!--<div class="panel-body news">-->
+                        <!--<div *ngFor="let item of profs">-->
+                            <!--<single-news [item]="item"></single-news>-->
+                            <!--<hr>-->
+                        <!--</div>-->
+                        <!--<li *ngFor="let item of profs">-->
+                            <!--<p>Имя пользователя: {{item.fio}}</p>-->
+                        <!--</li>-->
+                    <!--</div>-->
+                <!--</div>-->
+
+                <!-- ~~~~~~~СПИСОК ПРОФЕССОРОВ~~~~~~-->
+                <div class = "panel-heading"><h3><i class="fa fa-calendar" aria-hidden="true"></i> Расписание</h3></div>
+                <div class="panel-body">
+
+                <div class="dropdown">
+                    <!--Trigger-->
+                    <button class="btn btn-dark dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><h4>Выберете преподавателя <i class="fa fa-caret-down" aria-hidden="true"></i></h4></button>
+                    <!--Menu-->
+                    <div class="dropdown-menu dropdown-elegant">
+                        <!--<li *ngFor="let item of profs">-->
+                            <!--<a class="dropdown-item" href="professors/{{item.id}}/pairs">{{item.fio}}</a>-->
+                        <!--</li>-->
+                        <!--в ссылке передавать ид професора-->
+                        <li><a class="dropdown-item" href="professors/{{1}}/pairs">Карабцев Сергей Николаевич</a></li>
+                        <li><a class="dropdown-item" href="#">Завозкин Сергей Юрьевич</a></li>
+                        <li><a class="dropdown-item" href="#">Иванов Константин Станиславович</a></li>
+                        <li><a class="dropdown-item" href="#">Русакова Нина Александровна</a></li>
+                    </div>
+                </div>
+                </div>
+
+
+                <!-- ~~~~~~~СПИСОК ПРОФЕССОРОВ~~~~~~-->
+
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="head">
+                <div class="panel panel-default">
+                    <div class="panel-heading"><h3><i class="fa fa-th" aria-hidden="true"></i> Разное</h3></div>
+                    <ul class="list-group">
+                        <li class="list-group-item">Сюда можно</li>
+                        <li class="list-group-item">Например</li>
+                        <li class="list-group-item">Вставить любые ссылки</li>
+                        <li class="list-group-item">Или другие штуки</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
