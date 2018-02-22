@@ -1,5 +1,5 @@
-Backend/.idea/* 
-Backend/*.iml 
-Backend/*.log 
-Backend/.mvn/* 
-Backend/target/*
+./Backend/.idea/*
+./Backend/*.iml
+./Backend/*.log
+./Backend/.mvn/*
+./Backend/target/*
