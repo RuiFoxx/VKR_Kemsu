@@ -8,9 +8,6 @@
     <version>0.0.1-SNAPSHOT</version>
     <packaging>war</packaging>
 
-    <discipline>springbootjsp</discipline>
-    <description>An example of Spring Boot application that uses an embedded tomcat and jsp.</description>
-
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
