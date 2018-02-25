@@ -1,5 +1,6 @@
 
 export class Pair {
+    public id:number;
     public pairnumber:number;
     public weektype:string;
     public dayofweek:string;
@@ -10,6 +11,7 @@ export class Pair {
 
 
     constructor() {
+        this.id=0;
         this.pairnumber = 1;
         this.weektype = "";
         this.dayofweek = "";
@@ -18,6 +20,7 @@ export class Pair {
         this.discipline = "";
         this.group="";
     }
+
 }
 
 

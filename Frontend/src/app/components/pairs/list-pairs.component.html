@@ -1,7 +1,7 @@
 <div class="container">
     <div class="header">
         <h1><i class="fa fa-university" aria-hidden="true"></i> КемГУ Кафедра ЮНЕСКО</h1>
-        <p>Информационный кафедральный портал.</p>
+        <p>Расписание занятий кафедры.</p>
     </div>
     <div class="row">
         <div class="col-md-9">
@@ -9,69 +9,128 @@
                 <!-- ~~~~~~~РАСПИСАНИЕ~~~~~~-->
                 <div class = "panel-heading"><h3><i class="fa fa-calendar" aria-hidden="true"></i> Расписание</h3></div>
                 <div class="panel-body">
-                    <table class="table table-bordered">
-                        <thead>
-                        <tr>
-                            <th></th>
-                            <th>Понедельник</th>
-                            <th>Вторник</th>
-                            <th>Среда</th>
-                            <th>Четверг</th>
-                            <th>Пятница</th>
-                            <th>Суббота</th>
-                        </tr>
-                        </thead>
-                        <!--~~~Monday~~~-->
-                        <tbody>
-                        <tr>
-                            <!--<th rowspan="5" scope="rowgroup">Понедельник</th>-->
-                            <!--<th scope="row">8:30 - 10:05</th>-->
-                            <th>8:30 - 10:05</th>
-                            <single-pair></single-pair> <!--<single-pair> [item]="item"</single-pair>-->
-                            <td>Пары на вт</td>
-                            <td>Пары на ср</td>
-                            <td>Пары на чт</td>
-                            <td>Пары на пт</td>
-                            <td>Пары на сб</td>
-                        </tr>
-                        <tr>
-                            <th>10:15 - 11:50</th>
-                            <td>Пары на пн</td>
-                            <td>Пары на вт</td>
-                            <td>Пары на ср</td>
-                            <td>Пары на чт</td>
-                            <td>Пары на пт</td>
-                            <td>Пары на сб</td>
-                        </tr>
-                        <tr>
-                            <th>12:15 - 13:50</th>
-                            <td>Пары на пн</td>
-                            <td>Пары на вт</td>
-                            <td>Пары на ср</td>
-                            <td>Пары на чт</td>
-                            <td>Пары на пт</td>
-                            <td>Пары на сб</td>
-                        </tr>
-                        <tr>
-                            <th>14:00 - 15:35</th>
-                            <td>Пары на пн</td>
-                            <td>Пары на вт</td>
-                            <td>Пары на ср</td>
-                            <td>Пары на чт</td>
-                            <td>Пары на пт</td>
-                            <td>Пары на сб</td>
-                        </tr>
-                        <tr>
-                            <th>16:00 - 17:35</th>
-                            <td>Пары на пн</td>
-                            <td>Пары на вт</td>
-                            <td>Пары на ср</td>
-                            <td>Пары на чт</td>
-                            <td>Пары на пт</td>
-                            <td>Пары на сб</td>
-                        </tr>
-                        </tbody>
-                    </table>
+
+                    <!--~~~~~~~~ВКЛАДКИ~~~~~~~-->
+                    <!-- Nav tabs -->
+                    <ul class="nav nav-tabs nav-justified">
+                        <li class="nav-item">
+                            <a class="nav-link active" data-toggle="tab" href="#panel1" role="tab"><h4>Четная</h4></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-toggle="tab" href="#panel2" role="tab"><h4>Нечетная</h4></a>
+                        </li>
+                    </ul>
+                    <!-- Tab panels -->
+                    <div class="tab-content card">
+
+                        <!--~~~~~~~~~ЧЕТНАЯ~~~~~~~~~-->
+                        <div class="tab-pane fade in show active" id="panel1" role="tabpanel">
+                            <br>
+                            <table class="table table-bordered">
+                                <thead>
+                                <tr>
+                                    <th></th>
+                                    <th>Понедельник</th>
+                                    <th>Вторник</th>
+                                    <th>Среда</th>
+                                    <th>Четверг</th>
+                                    <th>Пятница</th>
+                                    <th>Суббота</th>
+                                </tr>
+                                </thead>
+                                <!--~~~Monday~~~-->
+                                <tbody>
+                                <tr>
+                                    <!--<th rowspan="5" scope="rowgroup">Понедельник</th>-->
+                                    <!--<th scope="row">8:30 - 10:05</th>-->
+                                    <th>8:30 - 10:05</th>
+                                    <td *ngFor="let pair of FirstChetPairs">
+                                    <single-pair [pair]="pair"> </single-pair>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>10:15 - 11:50</th>
+                                    <td *ngFor="let pair of SecondChetPairs">
+                                        <single-pair [pair]="pair"> </single-pair>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>12:15 - 13:50</th>
+                                    <td *ngFor="let pair of ThirdChetPairs">
+                                        <single-pair [pair]="pair"> </single-pair>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>14:00 - 15:35</th>
+                                    <td *ngFor="let pair of FourthChetPairs">
+                                        <single-pair [pair]="pair"> </single-pair>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>16:00 - 17:35</th>
+                                    <td *ngFor="let pair of FifthChetPairs">
+                                        <single-pair [pair]="pair"> </single-pair>
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <!--~~~~~~~~~~~~/.ЧЕТНАЯ~~~~~~~~~~~~~-->
+
+                        <!--~~~~~~~~~~~~НЕЧЕТНАЯ~~~~~~~~~~~-->
+                        <div class="tab-pane fade" id="panel2" role="tabpanel">
+                            <table class="table table-bordered">
+                                <thead>
+                                <tr>
+                                    <th></th>
+                                    <th>Понедельник</th>
+                                    <th>Вторник</th>
+                                    <th>Среда</th>
+                                    <th>Четверг</th>
+                                    <th>Пятница</th>
+                                    <th>Суббота</th>
+                                </tr>
+                                </thead>
+                                <!--~~~Monday~~~-->
+                                <tbody>
+                                <tr>
+                                    <!--<th rowspan="5" scope="rowgroup">Понедельник</th>-->
+                                    <!--<th scope="row">8:30 - 10:05</th>-->
+                                    <th>8:30 - 10:05</th>
+                                    <td *ngFor="let pair of FirstNechetPairs">
+                                        <single-pair [pair]="pair"> </single-pair>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>10:15 - 11:50</th>
+                                    <td *ngFor="let pair of SecondNechetPairs">
+                                        <single-pair [pair]="pair"> </single-pair>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>12:15 - 13:50</th>
+                                    <td *ngFor="let pair of ThirdNechetPairs">
+                                        <single-pair [pair]="pair"> </single-pair>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>14:00 - 15:35</th>
+                                    <td *ngFor="let pair of FourthNechetPairs">
+                                        <single-pair [pair]="pair"> </single-pair>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>16:00 - 17:35</th>
+                                    <td *ngFor="let pair of FifthNechetPairs">
+                                        <single-pair [pair]="pair"> </single-pair>
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <!--~~~~~~~~~/.НЕЧЕТНАЯ~~~~~~~~-->
+                    </div>
+                    <!--~~~~~~~~ВКЛАДКИ~~~~~~~-->
                 </div>
                 <!-- ~~~~~~~РАСПИСАНИЕ~~~~~~-->
 
