@@ -2,6 +2,7 @@ package com.unesco.core.controller;
 
 import com.unesco.core.ViewModel.PairViewModel;
 import com.unesco.core.entities.Pair;
+import com.unesco.core.entities.Professor;
 import com.unesco.core.entities.WeekType;
 import com.unesco.core.repositories.PairRepository;
 import com.unesco.core.repositories.ProfessorRepository;
@@ -22,9 +23,13 @@ public class PairController {
     @Autowired
     public PairRepository pairRepository;
 
-    @RequestMapping("/pairs/chet")
-    public List<PairViewModel> getChetPairs() {
-        Iterable<Pair> pairs = pairRepository.findAll();
+    @Autowired
+    public ProfessorRepository professorRepository;
+
+    @RequestMapping("/professor/{id}/pairs/even")
+    public List<PairViewModel> getChetPairs(@PathVariable("id") int id) {
+        Professor professor = professorRepository.findOne((long)id);
+        Iterable<Pair> pairs = pairRepository.findPairsByProfessor(professor);
         List<PairViewModel> chetPairList = new ArrayList<PairViewModel>();
         for(Pair p : pairs) {
             if(p.getWeektype().getType().equals("Чет")) {
@@ -36,9 +41,10 @@ public class PairController {
         return chetPairList;
     }
 
-    @RequestMapping("/pairs/nechet")
-    public List<PairViewModel> getNechetPairs() {
-        Iterable<Pair> pairs = pairRepository.findAll();
+    @RequestMapping("/professor/{id}/pairs/odd")
+    public List<PairViewModel> getNechetPairs(@PathVariable("id") int id) {
+        Professor professor = professorRepository.findOne((long)id);
+        Iterable<Pair> pairs = pairRepository.findPairsByProfessor(professor);
         List<PairViewModel> nechetPairList = new ArrayList<PairViewModel>();
         for(Pair p : pairs) {
             if(p.getWeektype().getType().equals("Нечет")) {
