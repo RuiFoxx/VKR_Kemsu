@@ -16,8 +16,7 @@ export const RouteConstants = {
     },
     Professor: {
         All: "professors",
-        //GetPairs:"professors/pairs",
-        GetPairs:"professors/:id/pairs"
+        GetPairs:"professor/:id/pairs"
     },
     NotFound: "404"
 }
@@ -42,8 +41,10 @@ export const ApiRouteConstants = {
     },
     Professor: {
         All: "professors",
-        GetPairs:"professors/:id/pairs"//???
-    },
+        //GetPairs:"professors/:id"//???
+        GetChetPairs:"professor/:id/pairs/even",
+        GetNechetPairs:"professor/:id/pairs/odd"
+},
     Issue: {
         All: "issue/list",
         Create: "issue/create",

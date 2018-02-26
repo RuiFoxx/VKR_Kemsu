@@ -8,7 +8,7 @@ import {Pair} from "../../models/pair.model";
 
 export class SinglePairComponent implements OnInit {
 
-    @Input() pair:Pair;
+    @Input() pair: Pair;
 
     ngOnInit(): void{
 

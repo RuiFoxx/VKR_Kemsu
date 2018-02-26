@@ -18,13 +18,24 @@ export class ProfessorService{
         return this.http.get(ApiRouteConstants.Professor.All)
             .catch(this.handleError);
     }
-
-    public GetPairs(id: number): Observable<Array<Pair>>{
+    public GetChetPairs(id: number): Observable<Array<Pair>> {
         let params: HttpParams = new HttpParams();
-        //Сделать пост
-        return this.http.get(ApiRouteConstants.Professor.GetPairs.replace(":id", id.toString()))
+        return this.http.get(ApiRouteConstants.Professor.GetChetPairs.replace(":id", id.toString()))
             .catch(this.handleError);
     }
+
+    public GetNechetPairs(id: number): Observable<Array<Pair>> {
+        let params: HttpParams = new HttpParams();
+        return this.http.get(ApiRouteConstants.Professor.GetNechetPairs.replace(":id", id.toString()))
+            .catch(this.handleError);
+    }
+
+    // public GetPairs(id: number): Observable<Array<Pair>>{
+    //     let params: HttpParams = new HttpParams();    //
+    //     return this.http.get(ApiRouteConstants.Professor.GetPairs.replace(":id", id.toString()))
+    //         .catch(this.handleError);
+    // }
+
 
     private handleError(error: HttpErrorResponse | any) {
         let errMsg: string;
@@ -38,4 +49,6 @@ export class ProfessorService{
         console.error(errMsg);
         return Observable.throw(errMsg);
     }
+
+
 }
