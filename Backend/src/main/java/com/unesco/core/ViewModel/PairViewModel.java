@@ -19,4 +19,60 @@ public class PairViewModel {
         this.discipline = discipline;
         this.group = group;
     }
+
+    public int getPairnumber() {
+        return pairnumber;
+    }
+
+    public void setPairnumber(int pairnumber) {
+        this.pairnumber = pairnumber;
+    }
+
+    public String getWeektype() {
+        return weektype;
+    }
+
+    public void setWeektype(String weektype) {
+        this.weektype = weektype;
+    }
+
+    public String getDayofweek() {
+        return dayofweek;
+    }
+
+    public void setDayofweek(String dayofweek) {
+        this.dayofweek = dayofweek;
+    }
+
+    public String getProfessor() {
+        return professor;
+    }
+
+    public void setProfessor(String professor) {
+        this.professor = professor;
+    }
+
+    public String getRoom() {
+        return room;
+    }
+
+    public void setRoom(String room) {
+        this.room = room;
+    }
+
+    public String getDiscipline() {
+        return discipline;
+    }
+
+    public void setDiscipline(String discipline) {
+        this.discipline = discipline;
+    }
+
+    public String getGroup() {
+        return group;
+    }
+
+    public void setGroup(String group) {
+        this.group = group;
+    }
 }
