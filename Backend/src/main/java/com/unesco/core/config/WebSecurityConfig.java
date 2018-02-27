@@ -50,7 +50,11 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
             .authorizeRequests()
             .antMatchers("/api/account/login").permitAll()
                 .antMatchers("/api/account/registration").permitAll()
-                .antMatchers("/api/demo/**").permitAll()
+                .antMatchers("/images/**").permitAll()
+                .antMatchers("/fonts/**").permitAll()
+                .antMatchers("/js/**").permitAll()
+                .antMatchers("/vendor/**").permitAll()
+                .antMatchers("/css/**").permitAll()
             .anyRequest().authenticated()
             .and()
             // We filter the api/login requests
@@ -64,8 +68,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Override
     public void configure(WebSecurity web) throws Exception {
-        web.ignoring().antMatchers("/api/news/all");
-        web.ignoring().antMatchers("/api/demo/**");
+        web.ignoring().antMatchers("/api/news/all", "/api/demo/**", "/*");
     }
 
     @Autowired

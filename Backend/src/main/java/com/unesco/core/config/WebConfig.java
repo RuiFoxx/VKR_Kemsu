@@ -18,49 +18,16 @@ import org.springframework.web.servlet.view.JstlView;
  * Created by lukasz on 27.08.2017.
  * With IntelliJ IDEA 15
  */
-@EnableWebMvc
 @Configuration
 public class WebConfig extends WebMvcConfigurerAdapter {
 
-    @Value("${spring.mvc.view.prefix}")
-    private String prefix;
-
-    @Value("${spring.mvc.view.suffix}")
-    private String suffix;
-
-
-    @Override
-    public void addInterceptors(InterceptorRegistry registry) {
-        registry.addInterceptor(new CorsInterceptor());
-    }
+    private static final String[] CLASSPATH_RESOURCE_LOCATIONS = {
+            "classpath:/META-INF/resources/", "classpath:/resources/",
+            "classpath:/static/", "classpath:/public/", "classpath:/public/vendor/" };
 
     @Override
     public void addResourceHandlers(ResourceHandlerRegistry registry) {
-
-        registry.addResourceHandler(
-                "/img/**",
-                "/js/**",
-                "/css/**",
-                "/fonts/**",
-                "/libs/**"
-        )
-                .addResourceLocations(
-                        "/WEB-INF/static/img/",
-                        "/WEB-INF/static/js/",
-                        "/WEB-INF/static/css/",
-                        "/WEB-INF/static/fonts/",
-                        "/WEB-INF/static/libs/"
-                );
-
-        super.addResourceHandlers(registry);
-    }
-
-    @Bean
-    public InternalResourceViewResolver setupViewResolver() {
-        InternalResourceViewResolver resolver = new InternalResourceViewResolver();
-        resolver.setPrefix(prefix);
-        resolver.setSuffix(suffix);
-        resolver.setViewClass(JstlView.class);
-        return resolver;
+        registry.addResourceHandler("/**")
+                .addResourceLocations(CLASSPATH_RESOURCE_LOCATIONS);
     }
 }
