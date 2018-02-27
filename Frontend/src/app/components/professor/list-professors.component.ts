@@ -1,21 +1,25 @@
-import {Component} from "@angular/core";
+import {Component, OnInit} from "@angular/core";
 import {Professor} from "../../models/professor.model";
 import {ProfessorService} from "../../services/professor.service";
-
-
+import {RouteConstants} from "../../bootstrap/app.route.constants";
 
 @Component({
     selector: 'list-professors-page',
     templateUrl: './list-professors.component.html'
 })
 
-export class ListProfessorsComponent{
+export class ListProfessorsComponent implements OnInit {
 
-    public profs:Professor[];
+    public profs: Professor[];
+    public RouteConstants;
 
-    constructor(private profsService: ProfessorService){
-        this.profs =[];
+    constructor(private profsService: ProfessorService) {
+        this.profs = [];
         this.GetProfs();
+    }
+
+    ngOnInit() {
+        this.RouteConstants = RouteConstants;
     }
 
     public GetProfs() {

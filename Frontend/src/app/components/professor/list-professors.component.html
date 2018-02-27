@@ -17,7 +17,7 @@
                     <!--Menu-->
                     <div class="dropdown-menu dropdown-elegant">
                         <li *ngFor="let item of profs">
-                            <a class="dropdown-item" href="professor/{{item.id}}/pairs">{{item.fio}}</a>
+                            <a class="dropdown-item" [routerLink]="[RouteConstants.Professor.GetPairs.replace(':id', item.id.toString())]">{{item.fio}}</a>
                         </li>
                     </div>
                 </div>

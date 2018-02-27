@@ -16,7 +16,7 @@ export const RouteConstants = {
     },
     Professor: {
         All: "professors",
-        GetPairs:"professor/:id/pairs"
+        GetPairs: "professor/:id/pairs"
     },
     NotFound: "404"
 }
