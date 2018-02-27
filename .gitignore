@@ -1,3 +1,8 @@
 Backend/.idea/*
 Backend/target/*
 Backend/*.iml
+Backend/src/main/resources/public/css/*
+Backend/src/main/resources/public/fonts/*
+Backend/src/main/resources/public/images/*
+Backend/src/main/resources/public/vendor/*
+Backend/src/main/resources/public/index.html
