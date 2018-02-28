@@ -18,6 +18,10 @@ export const RouteConstants = {
         All: "professors",
         GetPairs:"professor/:id/pairs"
     },
+    Group:{
+        All: "groups",
+        GetPairs: "groups/:id/pairs"
+    },
     NotFound: "404"
 }
 
@@ -41,10 +45,14 @@ export const ApiRouteConstants = {
     },
     Professor: {
         All: "professors",
-        //GetPairs:"professors/:id"//???
         GetChetPairs:"professor/:id/pairs/even",
         GetNechetPairs:"professor/:id/pairs/odd"
 },
+    Group: {
+        All: "groups",
+        GetChetPairs:"group/:id/pairs/even",
+        GetNechetPairs:"group/:id/pairs/odd"
+    },
     Issue: {
         All: "issue/list",
         Create: "issue/create",

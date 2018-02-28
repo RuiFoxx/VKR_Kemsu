@@ -1,16 +1,16 @@
 import {Component} from "@angular/core";
-import {Pair} from "../../models/pair.model";
-import {ProfessorService} from "../../services/professor.service";
+import {Pair} from "../../../models/pair.model";
 import {ActivatedRoute} from "@angular/router";
 import {Observable} from "rxjs";
+import {GroupService} from "../../../services/group.service";
 
 @Component({
-    selector: 'list-pairs',
-    templateUrl: './list-pairs.component.html',
-    styleUrls: ['./list-pairs.component.css']
+    selector: 'list-pairs-group',
+    templateUrl: './list-pairs-group.component.html',
+   // styleUrls: ['./list-pairs-group.component.css']
 })
 
-export class ListPairsComponent {
+export class ListPairsGroupComponent {
 
     public chetPairs: Pair[];
     public FirstChetPairs: Pair[];
@@ -26,9 +26,9 @@ export class ListPairsComponent {
     public FourthNechetPairs: Pair[];
     public FifthNechetPairs: Pair[];
 
-    private idProf: number;
+    private idGroup: number;
 
-    constructor(private activateRoute: ActivatedRoute, private profService: ProfessorService){
+    constructor(private activateRoute: ActivatedRoute, private groupService: GroupService){
         this.chetPairs=[];
         this.FirstChetPairs=[];
         this.SecondChetPairs=[];
@@ -43,21 +43,20 @@ export class ListPairsComponent {
         this.FourthNechetPairs=[];
         this.FifthNechetPairs=[];
 
-        this.idProf = activateRoute.snapshot.params['id'];
-        this.GetPairs(this.idProf);
+        this.idGroup = activateRoute.snapshot.params['id'];
+        this.GetPairs(this.idGroup);
     }
 
-    public GetPairs(idProf:number){
-        //this.profService.GetPairs(idProf)
-        this.profService.GetChetPairs(idProf)
+    public GetPairs(idGroup:number){
+        this.groupService.GetChetPairs(idGroup)
             .subscribe((res: any) => {
-                this.chetPairs= res;
-                this.sortChetPairs(this.chetPairs);
-            },
-            error => console.error(error))
+                    this.chetPairs= res;
+                    this.sortChetPairs(this.chetPairs);
+                },
+                error => console.error(error))
 
 
-        this.profService.GetNechetPairs(idProf)
+        this.groupService.GetNechetPairs(idGroup)
             .subscribe((res: any) => {
                     this.nechetPairs= res;
                     this.sortNechetPairs(this.nechetPairs);
