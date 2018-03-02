@@ -33,14 +33,17 @@ import { EditorListNewsComponent } from "../components/news/editor-list-news/edi
 import { ListNewsComponent } from "../components/news/list-news/list-news.component";
 import { NotFoundComponent } from "../components/notfound/notfound.component";
 import {ListProfessorsComponent} from "../components/professor/list-professors.component";
-import {SinglePairComponent} from "../components/pairs/single-pair.component";
-import {ListPairsComponent} from "../components/pairs/list-pairs.component";
+import {SinglePairProfessorComponent} from "../components/pairs/list-pairs-professor/single-pair-professor.component";
+import {ListPairsProfessorComponent} from "../components/pairs/list-pairs-professor/list-pairs-professor.component";
+import {ListPairsGroupComponent} from "../components/pairs/list-pairs-group/list-pairs-group.component";
+import {SinglePairGroupComponent} from "../components/pairs/list-pairs-group/single-pair-group.component";
 
 // services
 import { NewsService } from "../services/news.service";
 import { IssueService } from "../services/issues.service";
 import { AuthenticationService } from "../services/authService";
 import {ProfessorService} from "../services/professor.service";
+import {GroupService} from "../services/group.service";
 
 // guards
 import { AuthGuard } from "../guards/auth.guard";
@@ -51,6 +54,9 @@ import {ConfirmDialogModule} from "primeng/components/confirmdialog/confirmdialo
 import {MessageService} from "primeng/components/common/messageservice";
 import {ConfirmationService} from "primeng/primeng";
 import {AccountService} from "../services/accountService";
+
+
+
 
 
 
@@ -88,8 +94,10 @@ import {AccountService} from "../services/accountService";
         NotFoundComponent,
         EnumKeysPipe,
         ListProfessorsComponent,
-        SinglePairComponent,
-        ListPairsComponent
+        SinglePairProfessorComponent,
+        ListPairsProfessorComponent,
+        ListPairsGroupComponent,
+        SinglePairGroupComponent
     ],
     providers: [
         { provide: RequestOptions, useClass: GlobalHttpOptions },
@@ -103,7 +111,8 @@ import {AccountService} from "../services/accountService";
         AccountService,
         ConfirmationService,
         AuthGuard,
-        ProfessorService
+        ProfessorService,
+        GroupService
     ],
     entryComponents: [
     ],

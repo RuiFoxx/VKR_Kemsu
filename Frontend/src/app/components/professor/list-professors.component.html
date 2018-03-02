@@ -4,13 +4,11 @@
         <p>Расписание занятий кафедры.</p>
     </div>
     <div class="row">
-        <div class="col-md-9">
+        <div class="col-md-3">
             <div class="head">
-
-                <!-- ~~~~~~~СПИСОК ПРОФЕССОРОВ~~~~~~-->
                 <div class = "panel-heading"><h3><i class="fa fa-calendar" aria-hidden="true"></i> Расписание</h3></div>
                 <div class="panel-body">
-
+                    <!-- ~~~~~~~СПИСОК ПРОФЕССОРОВ~~~~~~-->
                 <div class="dropdown">
                     <!--Trigger-->
                     <button class="btn btn-dark dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><h4>Выберете преподавателя <i class="fa fa-caret-down" aria-hidden="true"></i></h4></button>
@@ -21,10 +19,33 @@
                         </li>
                     </div>
                 </div>
+                    <!-- ~~~~~~~СПИСОК ПРОФЕССОРОВ~~~~~~-->
                 </div>
-                <!-- ~~~~~~~СПИСОК ПРОФЕССОРОВ~~~~~~-->
             </div>
         </div>
+
+
+        <div class="col-md-6">
+            <div class="head">
+                <div class = "panel-heading"><h3><i class="fa fa-calendar" aria-hidden="true"></i> Расписание групп</h3></div>
+                <div class="panel-body">
+                    <!-- ~~~~~~~СПИСОК ГРУПП~~~~~~-->
+                    <div class="dropdown">
+                        <!--Trigger-->
+                        <button class="btn btn-dark dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><h4>Выберете группу <i class="fa fa-caret-down" aria-hidden="true"></i></h4></button>
+                        <!--Menu-->
+                        <div class="dropdown-menu dropdown-elegant">
+                            <li *ngFor="let item of groups">
+                                <a class="dropdown-item" [routerLink]="[RouteConstants.Group.GetPairs.replace(':id', item.id.toString())]">{{item.group}}</a>
+                            </li>
+                        </div>
+                    </div>
+                    <!-- ~~~~~~~СПИСОК ГРУПП~~~~~~-->
+                </div>
+            </div>
+        </div>
+
+
         <div class="col-md-3">
             <div class="head">
                 <div class="panel panel-default">
