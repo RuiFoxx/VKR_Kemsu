@@ -20,7 +20,7 @@ export const RouteConstants = {
     },
     Group:{
         All: "groups",
-        GetPairs: "groups/:id/pairs"
+        GetPairs: "group/:id/pairs"
     },
     NotFound: "404"
 }
