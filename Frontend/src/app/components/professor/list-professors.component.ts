@@ -4,6 +4,7 @@ import {ProfessorService} from "../../services/professor.service";
 import {RouteConstants} from "../../bootstrap/app.route.constants";
 import {Group} from "../../models/group.model";
 import {GroupService} from "../../services/group.service";
+import {Router} from "@angular/router";
 
 @Component({
     selector: 'list-professors-page',
@@ -16,7 +17,7 @@ export class ListProfessorsComponent implements OnInit {
     public groups: Group[];
     public RouteConstants;
 
-    constructor(private profsService: ProfessorService, private groupsService: GroupService) {
+    constructor(private router: Router, private profsService: ProfessorService, private groupsService: GroupService) {
         this.profs = [];
         this.GetProfs();
 

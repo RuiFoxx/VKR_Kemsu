@@ -1,0 +1,107 @@
+<div class="container">
+    <div class="header">
+        <h1><i class="fa fa-university" aria-hidden="true"></i> КемГУ Кафедра ЮНЕСКО</h1>
+        <p>Расписание занятий кафедры.</p>
+    </div>
+    <div class="row">
+        <div class="col-md-9">
+            <div class="head">
+                <!-- ~~~~~~~РАСПИСАНИЕ~~~~~~-->
+                <div class = "panel-heading"><h3><i class="fa fa-calendar" aria-hidden="true"></i> Расписание кафедры</h3></div>
+                <div class="panel-body">
+
+                    <table class="table table-bordered">
+                        <thead>
+                        <tr>
+                            <th rowspan="2">Ф.И.О.</th>
+                            <!--<th rowspan="2"> </th>-->
+                            <th colspan="6" scope="colgroup">Понедельник</th>
+                            <th colspan="6" scope="colgroup">Вторник</th>
+                            <th colspan="6" scope="colgroup">Среда</th>
+                            <th colspan="6" scope="colgroup">Четверг</th>
+                            <th colspan="6" scope="colgroup">Пятница</th>
+                            <th colspan="6" scope="colgroup">Суббота</th>
+                        </tr>
+                        <tr>
+                            <th scope="col">1</th>
+                            <th scope="col">2</th>
+                            <th scope="col">3</th>
+                            <th scope="col">4</th>
+                            <th scope="col">5</th>
+                            <th scope="col">6</th>
+                            <th scope="col">1</th>
+                            <th scope="col">2</th>
+                            <th scope="col">3</th>
+                            <th scope="col">4</th>
+                            <th scope="col">5</th>
+                            <th scope="col">6</th>
+                            <th scope="col">1</th>
+                            <th scope="col">2</th>
+                            <th scope="col">3</th>
+                            <th scope="col">4</th>
+                            <th scope="col">5</th>
+                            <th scope="col">6</th>
+                            <th scope="col">1</th>
+                            <th scope="col">2</th>
+                            <th scope="col">3</th>
+                            <th scope="col">4</th>
+                            <th scope="col">5</th>
+                            <th scope="col">6</th>
+                            <th scope="col">1</th>
+                            <th scope="col">2</th>
+                            <th scope="col">3</th>
+                            <th scope="col">4</th>
+                            <th scope="col">5</th>
+                            <th scope="col">6</th>
+                            <th scope="col">1</th>
+                            <th scope="col">2</th>
+                            <th scope="col">3</th>
+                            <th scope="col">4</th>
+                        </tr>
+                        </thead>
+                        <tr ng-repeat='(key, value) in chetPairs'>
+                            <single-pair-department [prof]="key" [pairs]="value"></single-pair-department>
+
+                        </tr>
+                        <!--<tr *ngFor="let item of chetPairs">-->
+                            <!--<single-pair-department [item]="item"></single-pair-department>-->
+
+                             <!--в цикле tr передавть в свой тег передавать препода и его пары-->
+                            <!--<th rowspan="1" scope="rowgroup">Преподаватель1</th>-->
+                            <!--<th scope="row">Чет.</th>-->
+                            <!--<td>пара</td>-->
+                            <!--<td>пара</td>-->
+                            <!--<td>пара</td>-->
+                        <!--</tr>-->
+                        <tr>
+                            <!--<th scope="row">Нечет.</th>-->
+                            <th rowspan="1" scope="rowgroup">Преподаватель2</th>
+                            <td>gfhf</td>
+                        </tr>
+                        <tr>
+                            <th rowspan="1" scope="rowgroup">Преподаватель3</th>
+                            <td>gfhf</td>
+                        </tr>
+
+                    </table>
+
+                </div>
+                <!-- ~~~~~~~РАСПИСАНИЕ~~~~~~-->
+
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="head">
+                <div class="panel panel-default">
+                    <div class="panel-heading"><h3><i class="fa fa-th" aria-hidden="true"></i> Разное</h3></div>
+                    <ul class="list-group">
+                        <li class="list-group-item">Сюда можно</li>
+                        <li class="list-group-item">Например</li>
+                        <li class="list-group-item">Вставить любые ссылки</li>
+                        <li class="list-group-item">Или другие штуки</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -37,6 +37,9 @@ import {SinglePairProfessorComponent} from "../components/pairs/list-pairs-profe
 import {ListPairsProfessorComponent} from "../components/pairs/list-pairs-professor/list-pairs-professor.component";
 import {ListPairsGroupComponent} from "../components/pairs/list-pairs-group/list-pairs-group.component";
 import {SinglePairGroupComponent} from "../components/pairs/list-pairs-group/single-pair-group.component";
+import {ListPairsDepartmentComponent} from "../components/pairs/list-pairs-department/list-pairs-department.component";
+import {SinglePairDepartmentComponent} from "../components/pairs/list-pairs-department/single-pair-department.component";
+import {EditorSinglePairComponent} from "../components/pairs/editor-single-pair/editor-single-pair.component";
 
 // services
 import { NewsService } from "../services/news.service";
@@ -54,6 +57,11 @@ import {ConfirmDialogModule} from "primeng/components/confirmdialog/confirmdialo
 import {MessageService} from "primeng/components/common/messageservice";
 import {ConfirmationService} from "primeng/primeng";
 import {AccountService} from "../services/accountService";
+import {PairService} from "../services/pair.service";
+import {DepartmentService} from "../services/department.service";
+
+
+
 
 
 
@@ -97,7 +105,10 @@ import {AccountService} from "../services/accountService";
         SinglePairProfessorComponent,
         ListPairsProfessorComponent,
         ListPairsGroupComponent,
-        SinglePairGroupComponent
+        SinglePairGroupComponent,
+        ListPairsDepartmentComponent,
+        SinglePairDepartmentComponent,
+        EditorSinglePairComponent
     ],
     providers: [
         { provide: RequestOptions, useClass: GlobalHttpOptions },
@@ -112,7 +123,9 @@ import {AccountService} from "../services/accountService";
         ConfirmationService,
         AuthGuard,
         ProfessorService,
-        GroupService
+        GroupService,
+        PairService,
+        DepartmentService
     ],
     entryComponents: [
     ],

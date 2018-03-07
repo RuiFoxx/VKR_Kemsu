@@ -1,0 +1,37 @@
+<div class="header">
+    <h1><i class="fa fa-university" aria-hidden="true"></i> КемГУ Кафедра Юнеско</h1>
+    <p>Расписание занятий кафедры.</p>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-9">
+            <div class="head">
+                <div class="panel panel-default">
+                    <div class="panel-heading"><h3><i class="fa fa-file-text-o" aria-hidden="true"></i> Добавление пары</h3></div>
+
+                    <div class="panel-body">
+                        <div class="row">
+                            <div class="col-xs-12 col-md-12">
+                                <div class="input-group input-group-lg">
+                                    <span class="input-group-addon">Дисциплина: </span>
+                                    <input type="text" class="form-control" id="discipline" name="discipline" placeholder="Название дисциплины" [(ngModel)]="newPair.discipline" />
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row ">
+                            <div class="col-xs-12 col-md-12">
+                                <button type="button" id="create-pair-button" class="btn btn-success " (click)="SavePair()">Схранить изменения</button>
+                                <!--<button type="button" class="btn btn-danger " (click)="GetBack()">Отмена</button>-->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+    </div>
+</div>
