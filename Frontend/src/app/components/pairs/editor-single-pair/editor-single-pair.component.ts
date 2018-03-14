@@ -6,6 +6,7 @@ import {ActivatedRoute} from "@angular/router";
 import {isUndefined} from "util";
 
 
+
 @Component({
     selector: 'editor-single-pair',
     templateUrl: './editor-single-pair.component.html',
@@ -16,13 +17,31 @@ export class EditorSinglePairComponent {
     private id: number;
     public newPair: Pair;
 
-    constructor(private pairService: PairService, private activateRoute: ActivatedRoute, private messageService: MessageService) {
+
+    constructor(private pairService: PairService,
+                private activateRoute: ActivatedRoute,
+                private messageService: MessageService) {
+
         this.newPair = new Pair();
-        // this.id = activateRoute.snapshot.params['id'];
-        // if (!isUndefined(this.id)) {
-        //     this.GetNews(this.id);
-        // }
+        this.id = activateRoute.snapshot.params['id'];
+        if (!isUndefined(this.id)) {
+            this.GetPair(this.id);
+        }
+
     }
+
+
+    public GetPair(id: number) {
+        this.pairService.Get(id)
+            .subscribe((res: any) => {
+                    this.newPair = res;
+                    console.log("Пара получена");
+                },
+                (error: any) => {
+                    console.error('Error: ' + error);
+                });
+    }
+
 
     public SavePair() {
         this.pairService.Save(this.newPair).subscribe(
@@ -32,4 +51,6 @@ export class EditorSinglePairComponent {
             error => console.error(error),
         );
     }
+
+
 }

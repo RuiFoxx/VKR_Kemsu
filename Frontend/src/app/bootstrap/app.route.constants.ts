@@ -23,11 +23,14 @@ export const RouteConstants = {
         GetPairs: "group/:id/pairs"
     },
     Department:{
+        All:"departments",
         GetPairs:"department/pairs"
     },
     Pair:{
         All:"pairs",
-        Create:"pair/create"
+        Create:"pair/create",
+        Edit:"pair/:id/edit",
+        EditList:"professor/:id/pairs/editList"
     },
     NotFound: "404"
 }
@@ -67,7 +70,8 @@ export const ApiRouteConstants = {
 
     Pair:{
         All:"pairs",
-        Save:"pairs/save"
+        Save:"pairs/save",
+        Get: "pair/get/:id"
     },
     Issue: {
         All: "issue/list",

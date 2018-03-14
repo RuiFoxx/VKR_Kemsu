@@ -5,6 +5,7 @@ import {Observable} from "rxjs";
 import {Pair} from "../models/pair.model";
 import {ApiRouteConstants} from "../bootstrap/app.route.constants";
 import {Professor} from "../models/professor.model";
+import {DepartmentPair} from "../models/departmentPair.model";
 
 
 @Injectable()
@@ -15,13 +16,13 @@ export class DepartmentService{
     ) { }
 
 
-    public GetChetPairs(): Observable<Map<Professor, Pair[]>> {
+    public GetChetPairs(): Observable<Array<DepartmentPair>> {
         return this.http.get(ApiRouteConstants.Department.GetChetPairs)
             .catch(this.handleError);
     }
 
-    public GetNechetPairs(): Observable<Map<Professor, Pair[]>> {
-        return this.http.get(ApiRouteConstants.Group.GetNechetPairs)
+    public GetNechetPairs(): Observable<Array<DepartmentPair>> {
+        return this.http.get(ApiRouteConstants.Department.GetNechetPairs)
             .catch(this.handleError);
     }
 

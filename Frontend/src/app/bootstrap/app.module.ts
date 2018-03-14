@@ -59,6 +59,7 @@ import {ConfirmationService} from "primeng/primeng";
 import {AccountService} from "../services/accountService";
 import {PairService} from "../services/pair.service";
 import {DepartmentService} from "../services/department.service";
+import {EditorListPairsComponent} from "../components/pairs/editor-list-pairs/editor-list-pairs.component";
 
 
 
@@ -108,6 +109,7 @@ import {DepartmentService} from "../services/department.service";
         SinglePairGroupComponent,
         ListPairsDepartmentComponent,
         SinglePairDepartmentComponent,
+        EditorListPairsComponent,
         EditorSinglePairComponent
     ],
     providers: [

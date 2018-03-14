@@ -14,10 +14,16 @@ export class PairService {
                 private router: Router) {
     }
 
+    public Get(id: number) {
+        let params: HttpParams = new HttpParams();
+        return this.http.get(ApiRouteConstants.Pair.Get.replace(":id", id.toString()))
+            .catch(this.handleError);
+    }
+
 
     public Save(pair: Pair) {
         let params = new HttpParams();
-        return this.http.post(ApiRouteConstants.Pair.Save, pair/*, {params: params }*/)
+        return this.http.post(ApiRouteConstants.Pair.Save, pair, {params: params })
             .catch(this.handleError);
     }
 

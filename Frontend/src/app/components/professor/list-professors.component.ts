@@ -17,7 +17,7 @@ export class ListProfessorsComponent implements OnInit {
     public groups: Group[];
     public RouteConstants;
 
-    constructor(private router: Router, private profsService: ProfessorService, private groupsService: GroupService) {
+    constructor(private profsService: ProfessorService, private groupsService: GroupService) {
         this.profs = [];
         this.GetProfs();
 

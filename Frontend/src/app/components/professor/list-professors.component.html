@@ -25,7 +25,7 @@
         </div>
 
 
-        <div class="col-md-6">
+        <div class="col-md-3">
             <div class="head">
                 <div class = "panel-heading"><h3><i class="fa fa-calendar" aria-hidden="true"></i> Расписание групп</h3></div>
                 <div class="panel-body">
@@ -43,75 +43,27 @@
                     <!-- ~~~~~~~СПИСОК ГРУПП~~~~~~-->
                 </div>
 
-                <!--<table class="table table-bordered">-->
-                    <!--<thead>-->
-                    <!--<tr>-->
-                        <!--<th rowspan="2">Ф.И.О.</th>-->
-                        <!--&lt;!&ndash;<th rowspan="2"> </th>&ndash;&gt;-->
-                        <!--<th colspan="6" scope="colgroup">Понедельник</th>-->
-                        <!--<th colspan="6" scope="colgroup">Вторник</th>-->
-                        <!--<th colspan="6" scope="colgroup">Среда</th>-->
-                        <!--<th colspan="6" scope="colgroup">Четверг</th>-->
-                        <!--<th colspan="6" scope="colgroup">Пятница</th>-->
-                        <!--<th colspan="6" scope="colgroup">Суббота</th>-->
-                    <!--</tr>-->
-                    <!--<tr>-->
-                        <!--<th scope="col">1</th>-->
-                        <!--<th scope="col">2</th>-->
-                        <!--<th scope="col">3</th>-->
-                        <!--<th scope="col">4</th>-->
-                        <!--<th scope="col">5</th>-->
-                        <!--<th scope="col">6</th>-->
-                        <!--<th scope="col">1</th>-->
-                        <!--<th scope="col">2</th>-->
-                        <!--<th scope="col">3</th>-->
-                        <!--<th scope="col">4</th>-->
-                        <!--<th scope="col">5</th>-->
-                        <!--<th scope="col">6</th>-->
-                        <!--<th scope="col">1</th>-->
-                        <!--<th scope="col">2</th>-->
-                        <!--<th scope="col">3</th>-->
-                        <!--<th scope="col">4</th>-->
-                        <!--<th scope="col">5</th>-->
-                        <!--<th scope="col">6</th>-->
-                        <!--<th scope="col">1</th>-->
-                        <!--<th scope="col">2</th>-->
-                        <!--<th scope="col">3</th>-->
-                        <!--<th scope="col">4</th>-->
-                        <!--<th scope="col">5</th>-->
-                        <!--<th scope="col">6</th>-->
-                        <!--<th scope="col">1</th>-->
-                        <!--<th scope="col">2</th>-->
-                        <!--<th scope="col">3</th>-->
-                        <!--<th scope="col">4</th>-->
-                        <!--<th scope="col">5</th>-->
-                        <!--<th scope="col">6</th>-->
-                        <!--<th scope="col">1</th>-->
-                        <!--<th scope="col">2</th>-->
-                        <!--<th scope="col">3</th>-->
-                        <!--<th scope="col">4</th>-->
-                    <!--</tr>-->
-                    <!--</thead>-->
-                    <!--<tr>-->
-                        <!--&lt;!&ndash; в цикле tr передавть в свой тег передавать препода и его пары&ndash;&gt;-->
-                        <!--<th rowspan="1" scope="rowgroup">Преподаватель1</th>-->
-                        <!--&lt;!&ndash;<th scope="row">Чет.</th>&ndash;&gt;-->
-                        <!--<td>пара</td>-->
-                        <!--<td>пара</td>-->
-                        <!--<td>пара</td>-->
-                    <!--</tr>-->
-                    <!--<tr>-->
-                        <!--&lt;!&ndash;<th scope="row">Нечет.</th>&ndash;&gt;-->
-                        <!--<th rowspan="1" scope="rowgroup">Преподаватель2</th>-->
-                        <!--<td>gfhf</td>-->
-                    <!--</tr>-->
-                    <!--<tr>-->
-                        <!--<th rowspan="1" scope="rowgroup">Преподаватель3</th>-->
-                        <!--<td>gfhf</td>-->
-                    <!--</tr>-->
+            </div>
+        </div>
 
-                <!--</table>-->
 
+        <div class="col-md-3">
+            <div class="head">
+                <div class = "panel-heading"><h3><i class="fa fa-calendar" aria-hidden="true"></i> Редактировать пары</h3></div>
+                <div class="panel-body">
+                    <!-- ~~~~~~~СПИСОК ПРОФЕССОРОВ~~~~~~-->
+                    <div class="dropdown">
+                        <!--Trigger-->
+                        <button class="btn btn-dark dropdown-toggle" type="button" id="dropdownMenu3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><h4>Выберете преподавателя <i class="fa fa-caret-down" aria-hidden="true"></i></h4></button>
+                        <!--Menu-->
+                        <div class="dropdown-menu dropdown-elegant">
+                            <li *ngFor="let item of profs">
+                                <a class="dropdown-item" [routerLink]="[RouteConstants.Pair.EditList.replace(':id', item.id.toString())]">{{item.fio}}</a>
+                            </li>
+                        </div>
+                    </div>
+                    <!-- ~~~~~~~СПИСОК ПРОФЕССОРОВ~~~~~~-->
+                </div>
             </div>
         </div>
 
